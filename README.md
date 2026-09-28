@@ -21,11 +21,14 @@ opção de **reverter** a qualquer momento.
 
 ## ✨ O que faz
 
-- Traduz **~1126 textos** da interface (menus, botões, painéis, diálogos, dicas).
-- **Não** mexe em bibliotecas de terceiros (editor Monaco, workers) nem em dados de SQL.
+- Traduz **mais de 1600 textos** da interface: **menu superior nativo** (Arquivo,
+  Editar, Exibir…), **Preferências/Configurações** (categorias + descrições),
+  botões, painéis, diálogos, dicas e o assistente de migração.
+- **Não** mexe em bibliotecas de terceiros (editor Monaco, workers) nem em dados
+  de SQL (nomes de variáveis, privilégios).
 - **Backup automático** de cada arquivo modificado — 100% reversível.
-- Método **cirúrgico**: só substitui valores de texto de tela (`label`, `heading`,
-  `title`, etc.), nunca identificadores internos — não quebra o programa.
+- Método **cirúrgico**: só substitui textos de tela (valores de `label`, `heading`,
+  `children`, itens de menu…), nunca identificadores internos — não quebra o programa.
 
 ## 📋 Pré-requisitos
 
@@ -35,11 +38,24 @@ opção de **reverter** a qualquer momento.
 
 ## 🚀 Como usar
 
+Primeiro, baixe o repositório:
+
 ```bash
 git clone https://github.com/Leandro9180/mysql-workbench-26.7.0-Portugues-Brasil.git
 cd mysql-workbench-26.7.0-Portugues-Brasil
+```
 
-# Aplica a tradução (auto-detecta a instalação em /opt, ~/, etc.)
+### Opção A — Instalação completa (não tem o Workbench ainda) ⭐ mais fácil
+
+Um comando **baixa o Workbench oficial da Oracle, instala e já traduz**:
+
+```bash
+sudo ./install.sh
+```
+
+### Opção B — Só traduzir (já tem o Workbench 26 instalado)
+
+```bash
 sudo python3 patch.py
 ```
 
